@@ -23,7 +23,7 @@ collections:
 
   # case study article example
   - name: Case Study
-    label: caseStudy
+    label: Case Study
     format: frontmatter
     extension: .html.md
     folder: source/case-studies/
