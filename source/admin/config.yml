@@ -22,11 +22,11 @@ collections:
       - {label: Image, name: image, widget: image, required: true}
 
   # case study article example
-  - name: caseStudy
+  - name: Case Study
     label: caseStudy
     format: frontmatter
     extension: .html.md
-    folder: source/posts/
+    folder: source/case-studies/
     create: true
     slug: '{{url}}'
     fields:
