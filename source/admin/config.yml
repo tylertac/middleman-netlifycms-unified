@@ -26,7 +26,7 @@ collections:
     label: caseStudy
     format: frontmatter
     extension: .html.md
-    folder: data/case-studies/
+    folder: source/posts/
     create: true
     slug: '{{url}}'
     fields:
