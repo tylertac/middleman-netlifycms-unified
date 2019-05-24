@@ -22,7 +22,7 @@ collections:
       - {label: Image, name: image, widget: image, required: true}
 
   # case study article example
-  - name: Case Study
+  - name: caseStudy
     label: Case Study
     format: frontmatter
     extension: .html.md

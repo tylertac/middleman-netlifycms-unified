@@ -25,6 +25,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 page "/partials/*", layout: false
 page "/admin/*", layout: false
+page "/case-studies/*", layout: 'case-study-layout'
 
 activate :blog do |blog|
   blog.permalink = "news/{year}/{title}.html"
@@ -38,14 +39,15 @@ end
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
 
-# proxy product.yml files to product.html 
+# proxy product.yml files to product.html
 data.products.each do |product|
   # product is an array: [filename, {data}]
-  proxy "/product/#{product[1][:title].parameterize}/index.html", "product.html", 
-  locals: {product: product[1]}, 
+  proxy "/product/#{product[1][:title].parameterize}/index.html", "product.html",
+  locals: {product: product[1]},
   layout: 'product-detail',
   ignore: true
 end
+
 
 # Helpers
 # Methods defined in the helpers block are available in templates
@@ -59,7 +61,7 @@ helpers do
   def background_image(image)
     "background-image: url('" << image_path(image) << "')"
   end
-  
+
   def nav_link(link_text, url, options = {})
     options[:class] ||= ""
     options[:class] << " active" if url == current_page.url
